@@ -16,6 +16,11 @@ export default function Textform(props) {
     
     setText(event.target.value);
   }
+
+  const clearButton =()=>{
+    let newText = "" ;
+    setText(newText);
+  }
   return (  <>
              <div>
             
@@ -26,6 +31,7 @@ export default function Textform(props) {
              </div>
             <button type="button" className="btn btn-dark mx-2" onClick={upButton}>Convert to Upper-Case</button>
             <button type="button" className="btn btn-dark mx-2" onClick={loButton}>Convert to Lower-Case</button>
+            <button type="button" className="btn btn-dark mx-2" onClick={clearButton}>Clear Text</button>
             <div className='container my-3'>
               <h2>Your Text Summary</h2>
               <p>{text.split(" ").length-1} words and {text.length} characters</p>
