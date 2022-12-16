@@ -11,7 +11,7 @@ function App() {
   const [mode, setmode] = useState('dark') ;
   return (
     <>
-    <Navbar title = "Text-Utils Application" text-light About = "About the Application" mode ={mode} />
+    <Navbar title = "Text-Utils Application" text-light  mode ={mode} />
     <Alert alert = "Welcome To Text-Utils"/>
     <div className='container my-3'>
     <Textform heading = "Enter your text here"/>
