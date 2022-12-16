@@ -3,15 +3,19 @@ import './App.css';
 //import About from './components/About';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-
+import React , {useState} from 'react'
+import Alert from './components/Alert';
 
 
 function App() {
+  const [mode, setmode] = useState('dark') ;
   return (
     <>
-    <Navbar title = "Text-Utils Application" About = "About the Application" />
+    <Navbar title = "Text-Utils Application" text-light About = "About the Application" mode ={mode} />
+    <Alert alert = "Welcome To Text-Utils"/>
     <div className='container my-3'>
     <Textform heading = "Enter your text here"/>
+    
     {/*<About>*/}
     </div>
     </>
